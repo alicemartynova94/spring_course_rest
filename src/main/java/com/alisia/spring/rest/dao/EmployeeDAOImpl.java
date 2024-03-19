@@ -1,6 +1,6 @@
 package com.alisia.spring.rest.dao;
 
-import com.alisia.spring.mvc_hibernate_aop.entity.Employee;
+import com.alisia.spring.rest.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
