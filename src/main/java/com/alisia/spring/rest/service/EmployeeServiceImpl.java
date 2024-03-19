@@ -1,7 +1,7 @@
 package com.alisia.spring.rest.service;
 
-import com.alisia.spring.mvc_hibernate_aop.dao.EmployeeDAO;
-import com.alisia.spring.mvc_hibernate_aop.entity.Employee;
+import com.alisia.spring.rest.dao.EmployeeDAO;
+import com.alisia.spring.rest.entity.Employee;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

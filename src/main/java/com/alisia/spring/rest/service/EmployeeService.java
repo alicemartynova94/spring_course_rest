@@ -1,6 +1,6 @@
 package com.alisia.spring.rest.service;
 
-import com.alisia.spring.mvc_hibernate_aop.entity.Employee;
+import com.alisia.spring.rest.entity.Employee;
 
 import java.util.List;
 
