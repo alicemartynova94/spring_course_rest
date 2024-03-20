@@ -23,11 +23,11 @@ public class MyConfig {
         ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
         try {
             comboPooledDataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
-            comboPooledDataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test?useSSL=false&amp;serverTimezone=UTC");
+            comboPooledDataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC");
             comboPooledDataSource.setUser("root");
             comboPooledDataSource.setPassword("");
         } catch (PropertyVetoException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return comboPooledDataSource;
     }
