@@ -1,4 +1,4 @@
-package com.alisia.spring.rest.exception_handler;
+package com.alisia.spring.rest.exception_handling;
 
 public class EmployeeIncorrectData {
     private String info;
