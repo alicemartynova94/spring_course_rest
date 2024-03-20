@@ -1,8 +1,8 @@
 package com.alisia.spring.rest.controller;
 
 import com.alisia.spring.rest.entity.Employee;
-import com.alisia.spring.rest.exception_handler.EmployeeIncorrectData;
-import com.alisia.spring.rest.exception_handler.NoSuchEmployeeException;
+import com.alisia.spring.rest.exception_handling.EmployeeIncorrectData;
+import com.alisia.spring.rest.exception_handling.NoSuchEmployeeException;
 import com.alisia.spring.rest.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,17 +34,4 @@ public class MyRestController {
         return employee;
     }
 
-    @ExceptionHandler
-    public ResponseEntity<EmployeeIncorrectData> handleException(NoSuchEmployeeException exception){
-        EmployeeIncorrectData incorrectData = new EmployeeIncorrectData();
-        incorrectData.setInfo(exception.getMessage());
-        return  new ResponseEntity<>(incorrectData, HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<EmployeeIncorrectData> handleException(Exception exception){
-        EmployeeIncorrectData incorrectData = new EmployeeIncorrectData();
-        incorrectData.setInfo(exception.getMessage());
-        return  new ResponseEntity<>(incorrectData, HttpStatus.BAD_REQUEST);
-    }
 }
