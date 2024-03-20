@@ -34,4 +34,10 @@ public class MyRestController {
         return employee;
     }
 
+    @PostMapping("/employees")
+    public Employee addNewEmployee(@RequestBody Employee employee) {
+        employeeService.saveEmployee(employee);
+        return employee;
+    }
+
 }
